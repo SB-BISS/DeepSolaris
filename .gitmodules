@@ -1,0 +1,3 @@
+[submodule "Python/ImageFeatureDetection"]
+	path = Python/ImageFeatureDetection
+	url = https://github.com/thinkpractice/ImageFeatureDetection.git
