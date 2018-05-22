@@ -1,0 +1,18 @@
+in the vision prep files several techniques are tested for identidying roofs in the pictures
+The most successfull approach is using the edge density in different subsquares of the picutres
+removing green color range also helps in the task. dark green and light yellow overlap with roofs color hence can't be removed
+The img splitter file recursively splits an image in multiple subimages removing the ones with not enough edges 
+
+The second approach was using YOLO object recognition networks in https://github.com/experiencor/keras-yolo2
+This approach was left after realizing that a proper labeling of bounding boxes has to be done and that this model requires too many resources to train
+
+The third approach is to use computer vision standard object recognition techniques. These are preferred as in out situation
+the perspective and angle is always the same.
+The cyvlfeat library is used to obtain sift descriptors for each image, different window sizes were tested
+The obtained descriptors for all images are later on clustered with kmeans in what will be the final features used for classification.
+The images are later analyzed and described by the amount of features present from each cluster (histogram)
+
+This approach was tested for both roof and solar panel recognition, scoring a 90% accuracy on the first and a 60% on the second
+This approach still needs some parameters to be tuned, these will be soon tested.
+
+Now seeing if a combination on the first and secon approach can bring to better results.
