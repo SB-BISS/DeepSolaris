@@ -16,3 +16,8 @@ This approach was tested for both roof and solar panel recognition, scoring a 90
 This approach still needs some parameters to be tuned, these will be soon tested.
 
 Now seeing if a combination on the first and secon approach can bring to better results.
+
+Built a simple labeling GUI to label the so obtained roof pictures (usually 75x75). It processes all files in a folder called roofs and allows manual labeling of them one by one moving them in pos/neg folder.
+
+Build 2 simple convolutional models for solar panel recognition. Tested them with and without data augmentation. The used data is the once hand labeled about aachen.
+The accuracy of the bigger model with data augmentation is about 97%
